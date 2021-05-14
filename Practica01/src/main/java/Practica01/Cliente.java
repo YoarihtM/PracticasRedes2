@@ -1,6 +1,7 @@
 package Practica01;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
 import java.io.OutputStreamWriter;
@@ -49,8 +50,8 @@ public class Cliente {
             
             cliente.close();
             
-        }catch (Exception e){
-            e.printStackTrace();
+        }catch (IOException | NumberFormatException e){
+            e.printStackTrace(System.out);
         }
     }
 }
