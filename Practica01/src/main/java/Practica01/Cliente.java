@@ -66,14 +66,8 @@ public class Cliente {
             ticket.close();
 
             cliente.close();
-            
-<<<<<<< HEAD
         }catch (IOException | NumberFormatException e){
             e.printStackTrace(System.out);
-=======
-        }catch (Exception e){
-                e.printStackTrace();
->>>>>>> 35a89b42aaf485ac613ff564e2f1d9a809809ebd
         }
     }
 }
