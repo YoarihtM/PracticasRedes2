@@ -33,24 +33,41 @@ public class Cliente {
                 opcion = Integer.parseInt(br.readLine());
 
                 PrintWriter pw = new PrintWriter(new OutputStreamWriter(cliente.getOutputStream()));
-                pw.println(opcion);
+//                pw.println(opcion);
                 pw.flush();
-            
+                
+                switch(opcion){
+                        case 1:
+                            
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            System.out.println("Compras terminadas, ticket generado");
+                            break;
+                        default:
+                            System.out.println("Opcion no valida!");
+                            break;
+                }
             }
-            
+                            
             PDDocument ticket = new PDDocument();
-            
+
             PDPage pagina = new PDPage();
-            
+
             ticket.addPage(pagina);
-            
+
             ticket.save("cliente/ticket.pdf");
             ticket.close();
-            
+
             cliente.close();
             
         }catch (Exception e){
-            e.printStackTrace();
+                e.printStackTrace();
         }
     }
 }
